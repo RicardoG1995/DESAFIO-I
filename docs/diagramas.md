@@ -54,7 +54,7 @@ Máscara {
 ```
 +----------------+     +------------------+     +----------------+
 |  Carga de     |     |  Procesamiento   |     |  Exportación  |
-|  Imágenes     | --> |  de Máscaras    | --> |  de Imagen    |
+|  Imágenes     | --> |  de Máscaras     | --> |  de Imagen    |
 +----------------+     +------------------+     +----------------+
        ^                      ^
        |                      |
