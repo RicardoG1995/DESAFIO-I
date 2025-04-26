@@ -1,3 +1,8 @@
+// Desafio I: Reconstrucción de Imagen BMP Distorsionada
+// Autores: Ricardo Gómez + Base original por Augusto Salazar y Aníbal Guerra
+// Descripción: Programa que deduce las transformaciones aplicadas a una imagen BMP
+// y reconstruye la imagen original.
+
 /*
  * Programa para reconstrucción de imágenes
  * Basado en los requisitos proporcionados en Requisitos_Reconstruccion_Imagen.md
