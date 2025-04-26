@@ -67,25 +67,26 @@ Máscara {
 ## Proceso de Reconstrucción
 
 ```
-+-------------------+     +------------------+     +------------------+
-| Imagen Original   |     | Imagen Donante   |     | Máscara         |
-| (I_O.bmp)        | -->  | (I_D.bmp)        | -->  | (M*.txt)        |
-+-------------------+     +------------------+     +------------------+
-          |                      |                        |
-          v                      v                        v
-    +------------------------------------------------+
-    |              Proceso de Reconstrucción         |
-    |                                                |
-    | 1. Leer píxeles de imagen original             |
-    | 2. Leer píxeles de imagen donante              |
-    | 3. Aplicar máscara                             |
-    | 4. Combinar píxeles según máscara              |
-    +------------------------------------------------+
++------------------+     +------------------+
+| Imagen Donante   |     | Máscara           |
+| (I_D.bmp)        | --> | (M*.txt)          |
++------------------+     +------------------+
+          |                       |
+          v                       v
+    +-----------------------------------------------+
+    |              Proceso de Reconstrucción        |
+    |                                               |
+    | 1. Leer píxeles de imagen donante              |
+    | 2. Leer datos de la máscara                    |
+    | 3. Aplicar la máscara sobre la imagen donante  |
+    | 4. Crear la imagen final                       |
+    +-----------------------------------------------+
                            |
                            v
                   +------------------+
                   | Imagen Final     |
                   +------------------+
+
 ```
 
 ## Manejo de Memoria
