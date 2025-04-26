@@ -387,7 +387,7 @@ int main(int argc, char* argv[]) {
 
         return 0;
 
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         cerr << "Error: " << e.what() << endl;
         cout << "\nPresiona Enter para cerrar..." << endl;
         cin.get();
