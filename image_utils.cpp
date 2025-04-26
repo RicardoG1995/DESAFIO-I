@@ -4,11 +4,13 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+using namespace std;
+
 
 unsigned char* loadPixels(QString input, int &width, int &height) {
     QImage image(input);
     if (image.isNull()) {
-        std::cerr << "Error: Could not load image " << input.toStdString() << std::endl;
+        cerr << "Error: Could not load image " << input.toStdString() << endl;
         return nullptr;
     }
 
@@ -51,14 +53,14 @@ bool exportImage(unsigned char* pixelData, int width, int height, QString archiv
 unsigned int* loadSeedMasking(const char* nombreArchivo, int &seed, int &n_pixels) {
     std::ifstream file(nombreArchivo);
     if (!file.is_open()) {
-        std::cerr << "Error: Could not open masking file " << nombreArchivo << std::endl;
+        cerr << "Error: Could not open masking file " << nombreArchivo << endl;
         return nullptr;
     }
 
     // Leer la primera línea (ignoraremos este número ya que puede ser incorrecto)
     int declared_pixels;
     if (!(file >> declared_pixels)) {
-        std::cerr << "Error: Could not read number of pixels" << std::endl;
+        cerr << "Error: Could not read number of pixels" << endl;
         file.close();
         return nullptr;
     }
@@ -67,7 +69,7 @@ unsigned int* loadSeedMasking(const char* nombreArchivo, int &seed, int &n_pixel
     std::string line;
     std::getline(file, line); // Consumir el resto de la primera línea
     if (!std::getline(file, line)) {
-        std::cerr << "Error: File is empty after pixel count" << std::endl;
+        cerr << "Error: File is empty after pixel count" << endl;
         file.close();
         return nullptr;
     }
@@ -130,14 +132,14 @@ unsigned int* loadSeedMasking(const char* nombreArchivo, int &seed, int &n_pixel
             }
         }
     } else {
-        std::cerr << "Error: Invalid file format (expected 2 or 3 values per line)" << std::endl;
+        cerr << "Error: Invalid file format (expected 2 or 3 values per line)" << endl;
         delete[] maskingData;
         file.close();
         return nullptr;
     }
 
     if (idx < n_pixels * 3) {
-        std::cerr << "Error: Insufficient data in masking file" << std::endl;
+        cerr << "Error: Insufficient data in masking file" << endl;
         delete[] maskingData;
         file.close();
         return nullptr;
