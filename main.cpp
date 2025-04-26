@@ -383,14 +383,14 @@ int main(int argc, char* argv[]) {
         }
 
         cout << "\nPresiona Enter para cerrar..." << endl;
-        std::cin.get();
+        cin.get();
 
         return 0;
 
     } catch (const std::exception& e) {
         cerr << "Error: " << e.what() << endl;
         cout << "\nPresiona Enter para cerrar..." << endl;
-        std::cin.get();
+        cin.get();
         return 1;
     }
 }
