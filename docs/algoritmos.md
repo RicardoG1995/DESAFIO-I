@@ -11,9 +11,6 @@ void desplazarIzquierda(unsigned char* destino, const unsigned char* img, int to
 void desplazarDerecha(unsigned char* destino, const unsigned char* img, int totalPixels, int bits)
 ```
 
-#### Complejidad
-- Tiempo: O(totalPixels)
-- Espacio: O(1)
 
 ### 2. Rotación de Bits
 #### Descripción
@@ -25,9 +22,6 @@ void rotarIzquierda(unsigned char* destino, const unsigned char* img, int totalP
 void rotarDerecha(unsigned char* destino, const unsigned char* img, int totalPixels, int bits)
 ```
 
-#### Complejidad
-- Tiempo: O(totalPixels)
-- Espacio: O(1)
 
 ## 1. Carga de Imágenes (loadPixels)
 
@@ -45,9 +39,6 @@ Carga una imagen BMP y la convierte en un arreglo de píxeles RGB.
 4. Convierte cada píxel a formato RGB
 5. Retorna el arreglo de píxeles
 
-### Complejidad
-- Tiempo: O(width * height)
-- Espacio: O(width * height * 3)
 
 ## 2. Carga de Máscaras (loadSeedMasking)
 
@@ -67,9 +58,6 @@ Lee archivos de máscara en múltiples formatos y los convierte en datos RGB.
    - Formato 2: Lee tripletas RGB directamente
 5. Retorna el arreglo de datos RGB
 
-### Complejidad
-- Tiempo: O(n_pixels)
-- Espacio: O(n_pixels * 3)
 
 ## 3. Exportación de Imagen (exportImage)
 
@@ -86,9 +74,6 @@ Convierte un arreglo de píxeles RGB en una imagen BMP.
 3. Copia los datos RGB al formato de imagen
 4. Guarda la imagen en disco
 
-### Complejidad
-- Tiempo: O(width * height)
-- Espacio: O(1) (usa la memoria existente)
 
 ## 4. Reconstrucción de Imagen
 
