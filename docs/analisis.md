@@ -8,7 +8,7 @@ El proyecto se centra en la reconstrucción de imágenes utilizando múltiples i
 
 ### 1. Imágenes de Entrada
 - **Imagen Máscara (M.bmp)**: Define las regiones que se deben reconstruir
-- **Imagen Objetivo (I_O.bmp)**: Imagen base que se desea modificar
+- **Imagen Objetivo (I_O.bmp)**: Imagen base a la que se debe de llegar, no entra en el programa.
 - **Imagen Donante (I_D.bmp)**: Imagen fuente para la reconstrucción
 - **Archivos de Máscara (M*.txt)**: Especifican los píxeles y valores para la reconstrucción
 
