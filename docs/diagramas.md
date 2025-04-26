@@ -69,13 +69,13 @@ Máscara {
 ```
 +-------------------+     +------------------+     +------------------+
 | Imagen Original   |     | Imagen Donante   |     | Máscara         |
-| (I_O.bmp)        | --> | (I_D.bmp)        | --> | (M*.txt)        |
+| (I_O.bmp)        | -->  | (I_D.bmp)        | -->  | (M*.txt)        |
 +-------------------+     +------------------+     +------------------+
           |                      |                        |
           v                      v                        v
     +------------------------------------------------+
-    |              Proceso de Reconstrucción          |
-    |                                                 |
+    |              Proceso de Reconstrucción         |
+    |                                                |
     | 1. Leer píxeles de imagen original             |
     | 2. Leer píxeles de imagen donante              |
     | 3. Aplicar máscara                             |
