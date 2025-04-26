@@ -199,7 +199,14 @@ unsigned char* reconstruirImagen(const unsigned char* imagenTransformada, const 
         aplicarXOR(tempBuffer, imagenActual, imagenD, totalPixels);
 
         // Copiar resultado al buffer principal
-        memcpy(imagenActual, tempBuffer, totalPixels * 3);
+
+       unsigned char *src_ptr = tempBuffer;      // Puntero al origen (tempBuffer)
+     unsigned char *dest_ptr = imagenActual;   // Puntero al destino (imagenActual)
+    size_t bytes_to_copy = totalPixels * 3;   // Total de bytes a copiar (ancho × alto × 3 canales RGB)
+
+    for (size_t i = 0; i < bytes_to_copy; i++) {
+    *(dest_ptr + i) = *(src_ptr + i);     // Copia byte a byte
+    }
 
         // Liberar buffer temporal
         delete[] tempBuffer;
